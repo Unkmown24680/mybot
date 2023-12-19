@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '28625475'))
-API_HASH = environ.get('API_HASH', 'da4894b36ca60168ba283519ed551606')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6727374231:AAF9jIdNHsgsKzfOFETVEhBGrTS_LdwU4GE")
+API_ID = int(environ.get('API_ID', '22179988'))
+API_HASH = environ.get('API_HASH', 'dae4b28e14b51583475a8def6ca06934')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6097903927:AAF5_-1LpzVdYVYqvUtfSVnfyZdWiEILEjM")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -27,7 +27,7 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/e215d12bfd4fa2155
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/9133dc596eabc73750774.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1720819569 6251724935').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001960613454').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -36,16 +36,16 @@ auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002017293253')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001946882127')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002069301673')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://kipaw96209:a0CLZ056nocL9tO4@cluster0.znbnxyq.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "mahi")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Mahesh')
+DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_NAME = environ.get('DATABASE_NAME', "")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
@@ -58,11 +58,11 @@ MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/requestyourmoviehere')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/movierulzking')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/TG_UPDATES1/371')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/openlink_movierequest/5')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', '𝑺𝑯𝑨𝑹𝑬 𝑨𝑵𝑫 𝑺𝑼𝑷𝑷𝑶𝑹𝑻 𝑴𝑬..💯⚡')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001946444191'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/movierulzking')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
@@ -96,8 +96,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://streambot123-76628609e5e0.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://streambot123-76628609e5e0.herokuapp.com/".format(FQDN, PORT)
+URL = "https://.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://.herokuapp.com/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -112,9 +112,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://streambot123-76628609e5e0.herokuapp.com/".format(FQDN)
+    URL = "https://.herokuapp.com/".format(FQDN)
 else:
-    URL = "https://streambot123-76628609e5e0.herokuapp.com/".format(FQDN)
+    URL = "https://.herokuapp.com/".format(FQDN)
 
 
 
