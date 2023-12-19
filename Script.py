@@ -232,7 +232,8 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 ═══════════════════ 
 𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄 𝐇𝐄𝐑𝐄 👇
 ╔══════════════════╗         
-    <a href="https://t.me/requestyourmoviehere">👻 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 👻</a>
+    <a href="https://t.me/requestyourmoviehere">👻 Movie Group 👻</a>
+    <a href="https://t.me/movierulzking">👻 Back up 👻</a>
 ╚══════════════════╝</b>"""
     IMDB_TEMPLATE_TXT = """
 <b>Query: {qurey}
